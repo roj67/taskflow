@@ -41,6 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+
+    'authentication.apps.AuthenticationConfig',
+    'task.apps.TaskConfig',
+    'project.apps.ProjectConfig'
 ]
 
 MIDDLEWARE = [
@@ -52,6 +58,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTH_USER_MODEL = 'authentication.User'
 
 ROOT_URLCONF = 'taskflow.urls'
 
